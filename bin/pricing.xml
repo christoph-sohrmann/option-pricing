@@ -1,0 +1,32 @@
+<pricing
+	timeunit="Month(s)"
+	currency="Dollar(s)"
+	outputfilename="test.txt"
+	outputlevel="1"
+	debugmode="0">
+
+	<option
+		type="call"
+		style="european"
+		maturity="1"
+		strikeprice="80"
+		interestrate="0.01">
+
+		<equity
+               currentprice="100"
+               volatility="0.2">
+
+		<solver
+			timestep="0.1"
+			steps="100000000"
+			type="mc"
+			confidence="95"
+			accuracy="0.001"
+			model="gbm"
+			seed="1001" />
+
+		</equity>
+
+	</option>
+
+</pricing>
